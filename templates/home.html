@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Homepage</h1>
+{% for page in pages %}
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.content[:200] }}...</p>
+    <a href="/page/{{ page.id }}">Read More</a>
+{% endfor %}
+{% endblock %}

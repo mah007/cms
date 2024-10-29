@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Admin Control Panel</h1>
+
+<!-- Link to add a new blog post -->
+<a href="{{ url_for('new_page') }}">Add New Blog Post</a>
+
+<ul>
+    {% for page in pages %}
+        <li>{{ page.title }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/admin/config">Configure Database</a>
+{% endblock %}

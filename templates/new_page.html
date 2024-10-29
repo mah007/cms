@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add New Blog Post</h1>
+<form method="POST">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="content">Content:</label><br>
+    <textarea id="editor" name="content"></textarea><br><br>
+
+    <input type="submit" value="Create Blog Post">
+</form>
+
+<!-- TinyMCE WYSIWYG Editor for rich text content -->
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+<script>
+  tinymce.init({
+    selector: '#editor',
+    menubar: false
+  });
+</script>
+{% endblock %}
